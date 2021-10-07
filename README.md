@@ -1,7 +1,18 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
+# Book Shelf
+An app to keep track of the books you're buying.
+Currently under construction.
+
+## TODO
+### eslint
+- no-vars
+- auto-import
+- import sort
+- more strict lint
+
+## Getting Started
 First, run the development server:
 
 ```bash
