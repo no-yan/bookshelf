@@ -22,6 +22,25 @@ https://github.com/chakra-ui/chakra-ui/issues/4665
 
 対応策:
 menu, 自作
+
+
+#### Color Mode 変更時のアニメーション
+transitionを設定して、カラーモード変更時に動きをつけたい。
+しかしいくつかの理由からうまく行っていない。
+chakra uiはglobal themeは、bodyのtransitionを反映しないため、emotion/reactからグローバルにtransitionを設定する必要がある。
+
+```
+<Global style={css`
+                * {
+                    transition: background 0.3s ease;
+                }
+            `}/>
+```
+
+だが、これはchakra uiの他コンポーネントのtransitionに影響を及ぼし、文字がかすれて読めなくなる。
+他に影響の出ないセレクタを考えればよいが、方法が思いつかないため着手していない。
+
+
 ## Getting Started
 
 First, run the development server:
