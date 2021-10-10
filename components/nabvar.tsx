@@ -40,7 +40,7 @@ export default function WithSubnavigation() {
                 px={{ base: 4 }}
                 borderBottom={1}
                 borderStyle={'solid'}
-                borderColor={useColorModeValue('gray.200', 'gray.900')}
+                borderColor={useColorModeValue('gray.200', 'gray.600')}
                 align={'center'}
             >
                 <Flex
@@ -64,6 +64,7 @@ export default function WithSubnavigation() {
                 <Flex
                     flex={{ base: 1 }}
                     justify={{ base: 'center', md: 'start' }}
+                    verticalAlign={'baseline'}
                 >
                     <Text
                         textAlign={useBreakpointValue({
@@ -72,7 +73,10 @@ export default function WithSubnavigation() {
                         })}
                         fontFamily={'heading'}
                         fontWeight={600}
+                        fontSize={'lg'}
                         color={useColorModeValue('gray.800', 'white')}
+                        as={Link}
+                        href={'/'}
                     >
                         Book Shelf
                     </Text>

@@ -5,6 +5,25 @@ const config: ThemeConfig = {
     initialColorMode: 'light',
     useSystemColorMode: true,
 };
+
+// const styles = {
+//     styles: {
+//         global: {
+//             // styles for the `body`
+//             '*': {
+//                 transition: 'all 1s',
+//             },
+//             // styles for the `a`
+//             a: {
+//                 color: 'teal.500',
+//                 _hover: {
+//                     textDecoration: 'underline',
+//                 },
+//             },
+//         },
+//     },
+// };
+
 // 3. extend the theme
 const theme = extendTheme({ config });
 export default theme;

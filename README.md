@@ -14,6 +14,14 @@ Currently under construction.
 -   import sort
 -   more strict lint
 
+### UI
+#### Popoverのフォーカス
+popoverの内部にtabでフォーカスすると、popover自体が消えている。
+これはchakra-uiの問題で、Popoverのtriggerがhoverの際に起こる。
+https://github.com/chakra-ui/chakra-ui/issues/4665
+
+対応策:
+menu, 自作
 ## Getting Started
 
 First, run the development server:

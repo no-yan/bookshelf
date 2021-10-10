@@ -34,13 +34,10 @@ const Feature = ({ title, desc }: FeatureProps) => {
             color={useColorModeValue('gray.900', 'white')}
             flex="1"
             borderRadius="md"
-            _hover={{
-                background: useColorModeValue('white', 'gray.600'),
-            }}
-            _focusVisible={{
-                background: useColorModeValue('white', 'gray.600'),
-            }}
+            _hover={bgConfig_HoverFocus}
+            _focusVisible={bgConfig_HoverFocus}
             tabIndex={0}
+            // transition={'all 1s'}
         >
             <Heading fontSize="xl">{title}</Heading>
             <Text mt={4}>{desc}</Text>
