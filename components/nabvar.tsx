@@ -140,8 +140,11 @@ const DesktopNav = () => {
                     <Popover trigger={'hover'} placement={'bottom-start'}>
                         <PopoverTrigger>
                             {/* Because PopoverTrigger requires inner top component be focusable, 
-                                    NextLink didn't work well. 
+                                    NextLink on the top doesn't work well. 
                                     By that reason, empty div is here.
+
+                                    >> When using this component, ensure the children passed to PopoverTrigger is focusable. 
+                                    https://chakra-ui.com/docs/overlay/popover
                                 */}
                             <div>
                                 <NextLink href={navItem.href ?? '#'} passHref>
