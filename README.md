@@ -40,6 +40,9 @@ chakra uiはglobal themeは、bodyのtransitionを反映しないため、emotio
 だが、これはchakra uiの他コンポーネントのtransitionに影響を及ぼし、文字がかすれて読めなくなる。
 他に影響の出ないセレクタを考えればよいが、方法が思いつかないため着手していない。
 
+#### カラーモード変更ボタンのアイコンが変わらない
+isDarkMode ? <Dark> : <Light>としているが、これが動作しない。
+useColorModeValueはhooksだが返り値はhooksではなさそうなので、動的レンダリングが機能していないのか？
 
 ## Getting Started
 
