@@ -22,6 +22,8 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
+import { DarkModeSwitcher } from './darkModeSwitcher';
+import NextLink from 'next/link';
 
 // <Button onClick={toggleColorMode}>
 // Toggle {colorMode === "light" ? "Dark" : "Light"}
@@ -66,20 +68,21 @@ export default function WithSubnavigation() {
                     justify={{ base: 'center', md: 'start' }}
                     verticalAlign={'baseline'}
                 >
-                    <Text
-                        textAlign={useBreakpointValue({
-                            base: 'center',
-                            md: 'left',
-                        })}
-                        fontFamily={'heading'}
-                        fontWeight={600}
-                        fontSize={'lg'}
-                        color={useColorModeValue('gray.800', 'white')}
-                        as={Link}
-                        href={'/'}
-                    >
-                        Book Shelf
-                    </Text>
+                    <NextLink href="/" passHref>
+                        <Text
+                            textAlign={useBreakpointValue({
+                                base: 'center',
+                                md: 'left',
+                            })}
+                            fontFamily={'heading'}
+                            fontWeight={600}
+                            fontSize={'lg'}
+                            color={useColorModeValue('gray.800', 'white')}
+                            as={Link}
+                        >
+                            Book Shelf
+                        </Text>
+                    </NextLink>
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
@@ -92,9 +95,7 @@ export default function WithSubnavigation() {
                     direction={'row'}
                     spacing={6}
                 >
-                    <Button onClick={toggleColorMode}>
-                        Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-                    </Button>
+                    <DarkModeSwitcher />
                     <Button
                         as={'a'}
                         fontSize={'sm'}
@@ -138,19 +139,26 @@ const DesktopNav = () => {
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>
                         <PopoverTrigger>
-                            <Link
-                                p={2}
-                                href={navItem.href ?? '#'}
-                                fontSize={'sm'}
-                                fontWeight={500}
-                                color={linkColor}
-                                _hover={{
-                                    textDecoration: 'none',
-                                    color: linkHoverColor,
-                                }}
-                            >
-                                {navItem.label}
-                            </Link>
+                            {/* Because PopoverTrigger requires inner top component be focusable, 
+                                    NextLink didn't work well. 
+                                    By that reason, empty div is here.
+                                */}
+                            <div>
+                                <NextLink href={navItem.href ?? '#'} passHref>
+                                    <Link
+                                        p={2}
+                                        fontSize={'sm'}
+                                        fontWeight={500}
+                                        color={linkColor}
+                                        _hover={{
+                                            textDecoration: 'none',
+                                            color: linkHoverColor,
+                                        }}
+                                    >
+                                        {navItem.label}
+                                    </Link>
+                                </NextLink>
+                            </div>
                         </PopoverTrigger>
 
                         {navItem.children && (
@@ -181,46 +189,47 @@ const DesktopNav = () => {
 
 const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
     return (
-        <Link
-            href={href}
-            role={'group'}
-            display={'block'}
-            p={2}
-            rounded={'md'}
-            _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
-        >
-            <Stack direction={'row'} align={'center'}>
-                <Box>
-                    <Text
+        <NextLink href={href ?? '#'}>
+            <Link
+                role={'group'}
+                display={'block'}
+                p={2}
+                rounded={'md'}
+                _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+            >
+                <Stack direction={'row'} align={'center'}>
+                    <Box>
+                        <Text
+                            transition={'all .3s ease'}
+                            _groupHover={{ color: 'pink.400' }}
+                            fontWeight={500}
+                        >
+                            {label}
+                        </Text>
+                        <Text fontSize={'sm'}>{subLabel}</Text>
+                    </Box>
+                    <Flex
                         transition={'all .3s ease'}
-                        _groupHover={{ color: 'pink.400' }}
-                        fontWeight={500}
+                        transform={'translateX(-10px)'}
+                        opacity={0}
+                        _groupHover={{
+                            opacity: '100%',
+                            transform: 'translateX(0)',
+                        }}
+                        justify={'flex-end'}
+                        align={'center'}
+                        flex={1}
                     >
-                        {label}
-                    </Text>
-                    <Text fontSize={'sm'}>{subLabel}</Text>
-                </Box>
-                <Flex
-                    transition={'all .3s ease'}
-                    transform={'translateX(-10px)'}
-                    opacity={0}
-                    _groupHover={{
-                        opacity: '100%',
-                        transform: 'translateX(0)',
-                    }}
-                    justify={'flex-end'}
-                    align={'center'}
-                    flex={1}
-                >
-                    <Icon
-                        color={'pink.400'}
-                        w={5}
-                        h={5}
-                        as={ChevronRightIcon}
-                    />
-                </Flex>
-            </Stack>
-        </Link>
+                        <Icon
+                            color={'pink.400'}
+                            w={5}
+                            h={5}
+                            as={ChevronRightIcon}
+                        />
+                    </Flex>
+                </Stack>
+            </Link>
+        </NextLink>
     );
 };
 
@@ -245,20 +254,20 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
         <Stack spacing={4} onClick={children && onToggle}>
             <Flex
                 py={2}
-                as={Link}
-                href={href ?? '#'}
                 justify={'space-between'}
                 align={'center'}
                 _hover={{
                     textDecoration: 'none',
                 }}
             >
-                <Text
-                    fontWeight={600}
-                    color={useColorModeValue('gray.600', 'gray.200')}
-                >
-                    {label}
-                </Text>
+                <NextLink href={href ?? '#'}>
+                    <Text
+                        fontWeight={600}
+                        color={useColorModeValue('gray.600', 'gray.200')}
+                    >
+                        {label}
+                    </Text>
+                </NextLink>
                 {children && (
                     <Icon
                         as={ChevronDownIcon}
@@ -285,9 +294,9 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
                 >
                     {children &&
                         children.map((child) => (
-                            <Link key={child.label} py={2} href={child.href}>
-                                {child.label}
-                            </Link>
+                            <NextLink href={child.href} key={child.label}>
+                                <Link py={2}>{child.label}</Link>
+                            </NextLink>
                         ))}
                 </Stack>
             </Collapse>
@@ -309,7 +318,7 @@ const NAV_ITEMS: Array<NavItem> = [
             {
                 label: 'Explore Design Work',
                 subLabel: 'Trending Design to inspire you',
-                href: '/goto',
+                href: '/hello',
             },
             {
                 label: 'New & Noteworthy',
@@ -339,6 +348,6 @@ const NAV_ITEMS: Array<NavItem> = [
     },
     {
         label: 'Hire Designers',
-        href: '#',
+        href: 'hello',
     },
 ];

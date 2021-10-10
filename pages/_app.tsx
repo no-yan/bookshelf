@@ -7,14 +7,16 @@ import { Global, css } from '@emotion/react';
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
+            {/*
+              * カラーモード変更時にtransitionを加えたいが、これをすると 
             <Global
                 styles={css`
                     * {
                         transition: background 0.3s, color 0.3s;
                     }
                 `}
-            />
-            <ChakraProvider resetCSS theme={theme}>
+            /> */}
+            <ChakraProvider theme={theme}>
                 <Component {...pageProps} />
             </ChakraProvider>
         </>

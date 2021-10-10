@@ -13,6 +13,7 @@ import {
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import CallToActionWithAnnotation from '../components/example';
 import WithSubnavigation from '../components/nabvar';
 
@@ -62,6 +63,9 @@ const Home: NextPage = () => {
                         <Feature title={'hoge'} desc="fuga" />
                         <Feature title={'hoge'} desc="fuga" />
                     </VStack>
+                    <Link href="/hello">
+                        <a>hello page</a>
+                    </Link>
                 </main>
             </Box>
         </Flex>
