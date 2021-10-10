@@ -1,19 +1,19 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "plugins": ["@typescript-eslint"],
-  "extends": ["plugin:@next/next/recommended","prettier"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+    "env": {
+        "browser": true,
+        "es2021": true
     },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "rules": {
-    "no-undef": "error"
-  }
+    "plugins": ["@typescript-eslint"],
+    "extends": ["plugin:@next/next/recommended", "prettier"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-undef": "error"
+    }
 }
