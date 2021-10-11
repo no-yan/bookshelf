@@ -2,11 +2,12 @@ import { Button } from '@chakra-ui/button';
 import { useColorMode, useColorModeValue } from '@chakra-ui/color-mode';
 
 export const DarkModeSwitcher = () => {
-    const isDarkMode = useColorModeValue('false', 'true');
+    const { colorMode } = useColorMode();
+
     const { toggleColorMode } = useColorMode();
     return (
         <Button onClick={toggleColorMode}>
-            {isDarkMode ? (
+            {colorMode === 'light' ? (
                 <svg
                     width="1em"
                     height="1em"
