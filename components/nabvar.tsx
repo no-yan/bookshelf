@@ -199,9 +199,10 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                 p={2}
                 rounded={'md'}
                 _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}
+                tabIndex={0}
             >
                 <Stack direction={'row'} align={'center'}>
-                    <Box>
+                    <Box tabIndex={0}>
                         <Text
                             transition={'all .3s ease'}
                             _groupHover={{ color: 'pink.400' }}
