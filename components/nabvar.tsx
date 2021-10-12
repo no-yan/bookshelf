@@ -202,7 +202,7 @@ const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
                 tabIndex={0}
             >
                 <Stack direction={'row'} align={'center'}>
-                    <Box tabIndex={0}>
+                    <Box>
                         <Text
                             transition={'all .3s ease'}
                             _groupHover={{ color: 'pink.400' }}
