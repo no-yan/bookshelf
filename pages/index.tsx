@@ -57,6 +57,9 @@ const Home: NextPage = () => {
                 width={'full'}
             >
                 <main>
+                    <Text pt={5} fontSize={'3xl'} align="center">
+                        This is Book Shelf
+                    </Text>
                     <VStack pt="10">
                         <Feature title={'hoge'} desc="fuga" />
                         <Feature title={'hoge'} desc="fuga" />
