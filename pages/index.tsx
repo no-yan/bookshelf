@@ -57,7 +57,12 @@ const Home: NextPage = () => {
                 width={'full'}
             >
                 <main>
-                    <Text pt={5} fontSize={'3xl'} align="center">
+                    <Text
+                        pt={5}
+                        fontSize={'3xl'}
+                        color={useColorModeValue('blue.700', 'teal.100')}
+                        align="center"
+                    >
                         This is Book Shelf
                     </Text>
                     <VStack pt="10">
