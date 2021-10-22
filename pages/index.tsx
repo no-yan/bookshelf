@@ -1,19 +1,8 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
-import {
-    Box,
-    Center,
-    Container,
-    Flex,
-    HStack,
-    Stack,
-    VStack,
-    Heading,
-    Text,
-} from '@chakra-ui/layout';
+import { Image } from '@chakra-ui/image';
+import { Box, Flex, VStack, Heading, Text, Center } from '@chakra-ui/layout';
+import { Spinner } from '@chakra-ui/spinner';
 import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
 import CallToActionWithAnnotation from '../components/example';
 import WithSubnavigation from '../components/nabvar';
 
@@ -45,37 +34,41 @@ const Feature = ({ title, desc }: FeatureProps) => {
         </Box>
     );
 };
-
+const Main = () => (
+    <Box bg={useColorModeValue('blue.50', 'gray.800')} flex={1} width={'full'}>
+        <Center>
+            <Image
+                src="/tree.jpg"
+                alt="tree"
+                width={400}
+                height={200}
+                fallback={<Spinner />}
+            />
+        </Center>
+        <main>
+            <Text
+                pt={5}
+                fontSize={'3xl'}
+                color={useColorModeValue('blue.700', 'teal.100')}
+                align="center"
+            >
+                This is Book Shelf
+            </Text>
+            <VStack pt="10">
+                <Feature title={'hoge'} desc="fuga" />
+                <Feature title={'hoge'} desc="fuga" />
+                <Feature title={'hoge'} desc="fuga" />
+                <Feature title={'hoge'} desc="fuga" />
+            </VStack>
+        </main>
+    </Box>
+);
 const Home: NextPage = () => {
     return (
         <Flex minH={'100vh'} direction={'column'}>
             <WithSubnavigation />
 
-            <Box
-                bg={useColorModeValue('blue.50', 'gray.800')}
-                flex={1}
-                width={'full'}
-            >
-                <main>
-                    <Text
-                        pt={5}
-                        fontSize={'3xl'}
-                        color={useColorModeValue('blue.700', 'teal.100')}
-                        align="center"
-                    >
-                        This is Book Shelf
-                    </Text>
-                    <VStack pt="10">
-                        <Feature title={'hoge'} desc="fuga" />
-                        <Feature title={'hoge'} desc="fuga" />
-                        <Feature title={'hoge'} desc="fuga" />
-                        <Feature title={'hoge'} desc="fuga" />
-                    </VStack>
-                    <Link href="/hello">
-                        <a>hello page</a>
-                    </Link>
-                </main>
-            </Box>
+            <Main />
         </Flex>
     );
 };

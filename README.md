@@ -39,7 +39,8 @@ chakra uiはglobal themeは、bodyのtransitionを反映しないため、emotio
 
 だが、これは他コンポーネントのtransitionに影響を及ぼし、文字がかすれて読めなくなる。
 他に影響の出ないセレクタを考えればよいが、方法が思いつかないため着手していない。
-
+=> 各コンポーネントで設定したものを打ち消してしまうので、transitionを設定しているものがおかしくなる。
+=> why? 詳細度は同じではないか
 
 ## Getting Started
 
