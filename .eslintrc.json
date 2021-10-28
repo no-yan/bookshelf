@@ -3,8 +3,14 @@
         "browser": true,
         "es2021": true
     },
-    "plugins": ["@typescript-eslint"],
-    "extends": ["plugin:@next/next/recommended", "prettier"],
+    "plugins": ["@typescript-eslint", "testing-library", "jest", "import"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@next/next/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "prettier"
+    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -14,6 +20,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "no-undef": "error"
+        "no-undef": "error",
+        "no-unused-vars": "warn"
     }
 }

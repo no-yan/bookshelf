@@ -3,7 +3,6 @@ import { Image } from '@chakra-ui/image';
 import { Box, Flex, VStack, Heading, Text, Center } from '@chakra-ui/layout';
 import { Spinner } from '@chakra-ui/spinner';
 import type { NextPage } from 'next';
-import CallToActionWithAnnotation from '../components/example';
 import WithSubnavigation from '../components/nabvar';
 
 type FeatureProps = {
