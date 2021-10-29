@@ -1579,7 +1579,7 @@
   resolved "https://registry.yarnpkg.com/@swc/core-win32-x64-msvc/-/core-win32-x64-msvc-1.2.105.tgz#544e92378688e3bfa1a88f0a75f56196985ad8e1"
   integrity sha512-ibxGdPdFcy8P/AcM/ZKhYAbr9/QJOBsTmTSrcDYPq6pr4GkM3+DghgtgDdV/mQFAieHIHm5/XWIQXu5cSfnTtg==
 
-"@swc/core@^1.2.104", "@swc/core@^1.2.105":
+"@swc/core@^1.2.104":
   version "1.2.105"
   resolved "https://registry.yarnpkg.com/@swc/core/-/core-1.2.105.tgz#098a5962f6d129c9766f9679a95694d18b682661"
   integrity sha512-LMji8Fs0cM6Mp7NR5h4GMDw9+UlOzy0X/yeJXMDgW/q7zmwxVqOLKUHHVXouaSNLrb6XblgqxLWsmhZLsqodQw==
@@ -1597,11 +1597,6 @@
     "@swc/core-win32-arm64-msvc" "^1.2.105"
     "@swc/core-win32-ia32-msvc" "^1.2.105"
     "@swc/core-win32-x64-msvc" "^1.2.105"
-
-"@swc/jest@^0.2.5":
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/@swc/jest/-/jest-0.2.5.tgz#2c9a84974208524e70192f1ff1c090cf6252c292"
-  integrity sha512-7Vb+RXuXWk47QbOPJ3hwSIMCwUVylp7JUhUITVtMe3hMoBv0IMfVCML9p6jiRhoBAzjzYDPPteKoVxSUJjFNPA==
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
