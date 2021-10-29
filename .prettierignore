@@ -2,5 +2,7 @@
 build
 coverage
 .next
-nodemodules
+.vscode
+public
+node_modules
 yarn.lock

@@ -9,25 +9,31 @@ Currently under construction.
 
 ### eslint
 
--   no-vars
--   auto-import
+-   [x] no-vars
+-   [x] auto-import
 -   import sort
 -   more strict lint
 
+### tsconfig
+
+-   [ ] fix {jsx:'react-jsx'} [see detail](https://github.com/microsoft/TypeScript/pull/46368)
+
 ### UI
-#### Popoverのフォーカス
-popoverの内部にtabでフォーカスすると、popover自体が消えている。
-これはchakra-uiの問題で、Popoverのtriggerがhoverの際に起こる。
+
+#### Popover のフォーカス
+
+popover の内部に tab でフォーカスすると、popover 自体が消えている。
+これは chakra-ui の問題で、Popover の trigger が hover の際に起こる。
 https://github.com/chakra-ui/chakra-ui/issues/4665
 
 対応策:
 menu, 自作
 
-
 #### Color Mode 変更時のアニメーション
-transitionを設定して、カラーモード変更時に動きをつけたい。
+
+transition を設定して、カラーモード変更時に動きをつけたい。
 しかしいくつかの理由からうまく行っていない。
-chakra uiはglobal themeは、bodyのtransitionを反映しないため、emotion/reactからグローバルにtransitionを設定する必要がある。
+chakra ui は global theme は、body の transition を反映しないため、emotion/react からグローバルに transition を設定する必要がある。
 
 ```
 <Global style={css`
@@ -37,9 +43,9 @@ chakra uiはglobal themeは、bodyのtransitionを反映しないため、emotio
             `}/>
 ```
 
-だが、これは他コンポーネントのtransitionに影響を及ぼし、文字がかすれて読めなくなる。
+だが、これは他コンポーネントの transition に影響を及ぼし、文字がかすれて読めなくなる。
 他に影響の出ないセレクタを考えればよいが、方法が思いつかないため着手していない。
-=> 各コンポーネントで設定したものを打ち消してしまうので、transitionを設定しているものがおかしくなる。
+=> 各コンポーネントで設定したものを打ち消してしまうので、transition を設定しているものがおかしくなる。
 => why? 詳細度は同じではないか
 
 ## Getting Started

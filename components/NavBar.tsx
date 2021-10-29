@@ -14,7 +14,6 @@ import {
     useColorModeValue,
     useBreakpointValue,
     useDisclosure,
-    useColorMode,
 } from '@chakra-ui/react';
 import {
     HamburgerIcon,
@@ -28,10 +27,10 @@ import NextLink from 'next/link';
 // <Button onClick={toggleColorMode}>
 // Toggle {colorMode === "light" ? "Dark" : "Light"}
 // </Button>
-export default function WithSubnavigation() {
+export default function NabVar() {
     const { isOpen, onToggle } = useDisclosure();
 
-    const { colorMode, toggleColorMode } = useColorMode();
+    // const { colorMode, toggleColorMode } = useColorMode();
     return (
         <Box>
             <Flex

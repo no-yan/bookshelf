@@ -1,7 +1,10 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "mocha": true,
+        "node": true,
+        "jest/globals": true
     },
     "plugins": ["@typescript-eslint", "testing-library", "jest", "import"],
     "extends": [
