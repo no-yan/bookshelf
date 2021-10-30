@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import NavBar from '../components/NavBar';
 
 import { Custom } from '../components/Custom';
+import { Center } from '@chakra-ui/react';
 
 const Main = () => (
     <Box bg={useColorModeValue('blue.100', 'gray.800')} flex={1} width={'full'}>
@@ -22,7 +23,9 @@ const Main = () => (
                 <Feature title={'hoge'} desc="fuga" />
                 <Feature title={'hoge'} desc="fuga" />
             </VStack> */}
-            <Custom />
+            <Center mt={12}>
+                <Custom />
+            </Center>
         </main>
     </Box>
 );
