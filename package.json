@@ -9,6 +9,7 @@
         "lint": "next lint",
         "lint-v": "DEBUG=eslint:* next lint",
         "test": "jest",
+        "test:watch": "jest --watch",
         "gen:theme-typings": "chakra-cli tokens theme/index.ts"
     },
     "dependencies": {
