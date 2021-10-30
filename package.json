@@ -7,6 +7,7 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
+        "lint-v": "DEBUG=eslint:* next lint",
         "test": "jest",
         "gen:theme-typings": "chakra-cli tokens theme/index.ts"
     },
