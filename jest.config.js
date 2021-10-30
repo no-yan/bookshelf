@@ -43,4 +43,10 @@ module.exports = {
         'jest-watch-typeahead/filename',
         'jest-watch-typeahead/testname',
     ],
+
+    collectCoverageFrom: [
+        'pages/**/*.{js,ts,tsx}',
+        'components/**/*.{js,tsx,ts}',
+        'theme/**/*.{js,tsx,ts}',
+    ],
 };
