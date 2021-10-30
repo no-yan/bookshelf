@@ -24,8 +24,7 @@
         "sourceType": "module"
     },
     "rules": {
-        "no-undef": "error",
-        "no-unused-vars": "warn"
+        "no-undef": "error"
     },
     "overrides": [
         {

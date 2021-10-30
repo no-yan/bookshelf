@@ -1,13 +1,6 @@
-import {
-    Center,
-    Checkbox,
-    useStyleConfig,
-    Button,
-    Theme,
-    chakra,
-} from '@chakra-ui/react';
-import { useState } from 'react';
-export const Custom = () => {
+import { Center, Checkbox, useStyleConfig, chakra } from '@chakra-ui/react';
+
+export const Custom = (): JSX.Element => {
     const styles = useStyleConfig('Button');
 
     return (

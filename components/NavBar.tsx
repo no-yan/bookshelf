@@ -27,7 +27,7 @@ import NextLink from 'next/link';
 // <Button onClick={toggleColorMode}>
 // Toggle {colorMode === "light" ? "Dark" : "Light"}
 // </Button>
-export default function NabVar() {
+export default function NabVar(): JSX.Element {
     const { isOpen, onToggle } = useDisclosure();
 
     // const { colorMode, toggleColorMode } = useColorMode();

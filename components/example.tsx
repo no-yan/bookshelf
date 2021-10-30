@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import {
     Box,
     Heading,
@@ -11,7 +10,7 @@ import {
     createIcon,
 } from '@chakra-ui/react';
 
-export default function CallToActionWithAnnotation() {
+export default function CallToActionWithAnnotation(): JSX.Element {
     return (
         <>
             <Container maxW={'3xl'}>
