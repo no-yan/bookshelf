@@ -29,12 +29,18 @@ Currently I am aiming to generate a custom config file with the button component
 ## lint
 
 -   [x] check jsx a11y working. earn how it works might help?
-    -   [x] seems plugin:@next/next/recommended not working.
+    -   [x] seems plugin:@next/next/recommended not working. (edit: Not so correct)
     -   [x] by this reason, I use extends:['next'] instead.
--   [ ] add
-    -   [ ] ~~airbnb~~ Meaningless errors and slow effective speed
+-   [ ] add rules
+    -   [x] ~~airbnb~~ Meaningless errors and slow effective speed
     -   [ ] prefer-arrow
 
 ## test
+
+-   [ ] Learn How to Test
+    -   [ ] Think which ones should be tested.
+-   [ ] Add Storybook
+
+rtl で computed layout のテストは難しく、時間もかかる。Storybook は反面自動化ができない。回帰テストは自動化できる反面、開発初期段階において導入するとスピードが下がる。
 
 -   investigate best practice of testing React.
