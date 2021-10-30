@@ -11,9 +11,6 @@
         "plugin:@typescript-eslint/recommended",
         "plugin:jest/recommended",
         "plugin:jest/style",
-        // "plugin:jsx-a11y/recommended",
-        // "plugin:@next/next/recommended", seems not working as expected. see related? issue https://github.com/vercel/next.js/issues/26907
-        // for reproduction, check if <input aria-labeledby="address_label"></input> would cause error.
         "next/core-web-vitals",
         "prettier"
     ],
