@@ -11,11 +11,11 @@ export const SelectorRadio = ({ label, options }: Props): JSX.Element => {
     return (
         <RadioGroup onChange={setValue} value={value}>
             <Stack direction="row">
-                <Text color={'orange.400'} marginRight={10}>
+                <Text color="orange.400" marginRight={10}>
                     {label}
                 </Text>
                 {options.map((option) => (
-                    <Radio colorScheme={'gray'} value={option.toString()}>
+                    <Radio colorScheme="gray" value={option.toString()}>
                         {option}
                     </Radio>
                 ))}

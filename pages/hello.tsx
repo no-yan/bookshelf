@@ -1,5 +1,3 @@
-const Hello = (): JSX.Element => {
-    return <div>hello</div>;
-};
+const Hello = (): JSX.Element => <div>hello</div>;
 
 export default Hello;

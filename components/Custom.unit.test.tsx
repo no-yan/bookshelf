@@ -1,4 +1,3 @@
-import { Custom } from './Custom';
 import React from 'react';
 import {
     render as rtlRender,
@@ -6,9 +5,10 @@ import {
     screen,
 } from '@testing-library/react';
 import { theme, ChakraProvider } from '@chakra-ui/react';
+import { Custom } from './Custom';
 
-const colors = theme.colors;
-const gray = colors.gray;
+const {colors} = theme;
+const {gray} = colors;
 
 // UI-less passthrough fallback to prevent using conditional logic in render
 function ChildrenPassthrough({ children }: { children: React.ReactElement }) {
@@ -32,7 +32,7 @@ describe('Home', () => {
         const colorButton = screen.getByRole('button');
         expect(colorButton).toHaveStyle({ backgroundColor: gray['100'] });
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        //@ts-ignore
+        // @ts-ignore
         const style = window.getComputedStyle(contentDiv?.[0]);
         expect(style.color).toBe('red');
     });

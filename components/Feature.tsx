@@ -5,6 +5,7 @@ type FeatureProps = {
     title: string;
     desc: string;
 };
+
 export const Feature = ({ title, desc }: FeatureProps): JSX.Element => {
     const bgConfig_HoverFocus = {
         background: useColorModeValue('white', 'gray.600'),

@@ -15,9 +15,9 @@ export const Custom = (): JSX.Element => {
         <>
             <HStack
                 bg="white"
-                rounded={'xl'}
-                w={'450px'}
-                h={'250px'}
+                rounded="xl"
+                w="450px"
+                h="250px"
                 p={22}
                 spacing={12}
                 justify="center"

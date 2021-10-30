@@ -1,6 +1,6 @@
 module.exports = {
     testEnvironment: 'jsdom',
-    setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
     modulePathIgnorePatterns: [
         '<rootDir>/website/.cache',
@@ -34,10 +34,13 @@ module.exports = {
             },
         ],
     },
+
     testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
     transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-    transformIgnorePatterns: ['/node_modules/'],
-    setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+    setupFilesAfterEnv: [
+        '@testing-library/jest-dom/extend-expect',
+        '<rootDir>/jest.setup.ts',
+    ],
 
     watchPlugins: [
         'jest-watch-typeahead/filename',

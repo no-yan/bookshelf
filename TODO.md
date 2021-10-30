@@ -6,11 +6,12 @@ Currently I am aiming to generate a custom config file with the button component
 ## feature
 
 -   [ ] Customizable Component Viewer
-    -   [ ] Only few components
+    -   [ ] Only a few components
     -   [ ] All
+        -   [ ] Support multi parts component
 -   [ ] Theme Changeable
-    -   [ ] ignoring global theme
-    -   [ ] apply global theme
+    -   [ ] without global theme
+    -   [ ] with global theme
 -   [ ] Edit with GUI
     -   [ ] Restricted options of Select
     -   [ ] All available options
@@ -20,6 +21,10 @@ Currently I am aiming to generate a custom config file with the button component
 -   [ ] Component Overview
 -   [ ] Theme generate
 -   [ ] Security Aware
+-   [ ] Theme Sharable
+    -   [ ] URL
+    -   [ ] KV Store
+    -   [ ] Viewer
 
 ## lint
 
