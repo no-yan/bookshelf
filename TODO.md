@@ -28,7 +28,12 @@ Currently I am aiming to generate a custom config file with the button component
 
 ## lint
 
-check jsx a11y working. earn how it works might help?
+-   [x] check jsx a11y working. earn how it works might help?
+    -   [x] seems plugin:@next/next/recommended not working.
+    -   [x] by this reason, I use extends:['next'] instead.
+-   [ ] add
+    -   [ ] ~~airbnb~~ Meaningless errors and slow effective speed
+    -   [ ] prefer-arrow
 
 ## test
 
