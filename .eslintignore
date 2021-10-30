@@ -5,3 +5,4 @@
 **/*.min.js
 **/*.config.js
 **/.*rc.json
+**/dist/

@@ -1,9 +1,8 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
-import { Box, Flex, VStack, Text, Center } from '@chakra-ui/layout';
+import { Box, Flex, Text } from '@chakra-ui/layout';
 import type { NextPage } from 'next';
 import NavBar from '../components/NavBar';
-import { Feature } from '../components/Feature';
-import { Button } from '@chakra-ui/react';
+
 import { Custom } from '../components/Custom';
 
 const Main = () => (
