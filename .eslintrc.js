@@ -14,7 +14,7 @@ module.exports = {
         'next/core-web-vitals',
         'prettier',
     ],
-    plugins: ['@typescript-eslint', 'testing-library', 'jest'],
+    plugins: ['testing-library'],
 
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -24,15 +24,4 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: 'module',
     },
-    rules: {
-        'no-undef': 'error',
-    },
-    overrides: [
-        {
-            files: ['*.ts', '*.tsx'],
-            rules: {
-                'no-undef': 'off',
-            },
-        },
-    ],
 };
