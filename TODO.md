@@ -44,3 +44,12 @@ Currently I am aiming to generate a custom config file with the button component
 rtl で computed layout のテストは難しく、時間もかかる。Storybook は反面自動化ができない。回帰テストは自動化できる反面、開発初期段階において導入するとスピードが下がる。
 
 -   investigate best practice of testing React.
+
+-   size が反映されない問題
+    chakra.div の問題かと疑ったが、普通に<Button>でも同じことが起こる。why?
+    -   更新が反映されていない可能性
+        -   そうなら bg が反映されないはず
+        -   関数を見る。
+        -   omitThemingProps で"styleConfig", "size", "variant", "colorScheme"を除外している。
+        -   https://github.com/chakra-ui/chakra-ui/blob/3adda59f95986abfc7b4d97a855900270cde2d3c/packages/system/src/system.utils.ts#L73
+        -
