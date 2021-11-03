@@ -1,5 +1,4 @@
 import { RadioGroup, Stack, Radio, Text } from '@chakra-ui/react';
-import { ReducerAction, useState } from 'react';
 import type { Action } from './Custom';
 
 type Props = {
@@ -15,8 +14,6 @@ export const SelectorRadio = ({
     value,
     onChange,
 }: Props): JSX.Element => {
-    console.log(value);
-
     return (
         <RadioGroup onChange={(e) => onChange(e)} value={value}>
             <Stack direction="row" alignItems="center">
@@ -36,15 +33,3 @@ export const SelectorRadio = ({
         </RadioGroup>
     );
 };
-// function RadioExample() {
-//     const [value, setValue] = useState(1)
-//     return (
-//       <RadioGroup onChange={setValue} value={value}>
-//         <Stack direction="row">
-//           <Radio value={1}>First</Radio>
-//           <Radio value={2}>Second</Radio>
-//           <Radio value={3}>Third</Radio>
-//         </Stack>
-//       </RadioGroup>
-//     )
-//   }

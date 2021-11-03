@@ -3,10 +3,11 @@ import { Box, Flex, Text } from '@chakra-ui/layout';
 import type { NextPage } from 'next';
 import { Center } from '@chakra-ui/react';
 import NavBar from '../components/NavBar';
-
+import { Editor } from './editor';
 import { Custom } from '../components/Custom';
+import React from 'react';
 
-const Main = () => (
+const Home: NextPage = () => (
     <Box bg={useColorModeValue('blue.100', 'gray.800')} flex={1} width="full">
         <main>
             <Text
@@ -17,24 +18,12 @@ const Main = () => (
             >
                 This is Book Shelf
             </Text>
-            {/* <VStack pt="10">
-                <Feature title={'hoge'} desc="fuga" />
-                <Feature title={'hoge'} desc="fuga" />
-                <Feature title={'hoge'} desc="fuga" />
-                <Feature title={'hoge'} desc="fuga" />
-            </VStack> */}
+
             <Center mt={12}>
                 <Custom />
             </Center>
         </main>
     </Box>
 );
-const Home: NextPage = () => (
-        <Flex minH="100vh" direction="column">
-            <NavBar />
-
-            <Main />
-        </Flex>
-    );
 
 export default Home;
