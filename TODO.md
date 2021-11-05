@@ -47,9 +47,29 @@ rtl で computed layout のテストは難しく、時間もかかる。Storyboo
 
 -   size が反映されない問題
     chakra.div の問題かと疑ったが、普通に<Button>でも同じことが起こる。why?
+
     -   更新が反映されていない可能性
+
         -   そうなら bg が反映されないはず
         -   関数を見る。
         -   omitThemingProps で"styleConfig", "size", "variant", "colorScheme"を除外している。
         -   https://github.com/chakra-ui/chakra-ui/blob/3adda59f95986abfc7b4d97a855900270cde2d3c/packages/system/src/system.utils.ts#L73
-        -
+        -   解決策：先に処理されるべき props を styleConfig で変換してしまう。
+
+    -   why? button に bg とかを設定する理由がわかっていない。styleConfig で渡される値を調べる。
+
+### Customizable Component Viewer
+
+コンポーネントの基本形はできたので、これをもっと便利にする。
+最初に実装する base props を決定する。baseTheme の default props を見て決める。
+
+-   color
+    -   color picker
+    -   それぞれの色で表示されたラジオボタン 色ごとに表示 => インターフェースは？
+-   px
+-   fontWeight
+-   h
+-   w
+-   fontSize
+-   bg
+-   bowShadow

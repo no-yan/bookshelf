@@ -38,7 +38,7 @@ const useEditor = (): {
     };
 
     const styles = useStyleConfig('Button', { size, variant });
-    console.log(size, styles);
+    // console.log(size, styles);
 
     return { variants, getterSetter, variant, setVariant, styles };
 };
@@ -54,7 +54,11 @@ export const Editor = (): JSX.Element => {
             <HStack w="full" spacing="2px">
                 <VStack>
                     <Button>hello</Button>
-                    <Button bg={getterSetter?.bg?.value} __css={styles}>
+                    <Button
+                        bg={getterSetter.bg?.value}
+                        boxShadow={getterSetter.boxShadow?.value}
+                        __css={styles}
+                    >
                         hello
                     </Button>
                 </VStack>
