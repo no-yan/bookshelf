@@ -56,6 +56,7 @@ export const OptionSelector = ({
                             options={options}
                             value={selectedValue[rule]}
                             onChange={curry}
+                            key={rule}
                         />
                     </>
                 );
