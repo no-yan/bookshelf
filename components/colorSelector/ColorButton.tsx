@@ -2,7 +2,12 @@ import { Flex, HStack } from '@chakra-ui/layout';
 import { Button, chakra } from '@chakra-ui/react';
 import React from 'react';
 
-export const ColorBox = () => {
+// TODO: ホバー時のテキスト色を変更し、読みやすくする
+export const ColorBox = ({
+    setValue,
+}: {
+    setValue: (val: string) => void;
+}): JSX.Element => {
     const menu = [
         'red.100',
         'red.200',
@@ -40,20 +45,11 @@ export const ColorBox = () => {
         'gray.100',
         'white',
     ];
+
     return (
         <>
             <Flex p="2">
                 {menu.map((item, index) => (
-                    // <chakra.button
-                    //     bg="green.100"
-                    //     border="1px"
-                    //     borderColor="blue.200"
-                    //     borderStartRadius={index === 0 ? 'md' : 'unset'}
-                    //     borderEndRadius={index === menu.length ? 'md' : 'unset'}
-                    //     key={item}
-                    // >
-                    //     {item}
-                    // </chakra.button>
                     <Button
                         size="sm"
                         bg={item}
@@ -63,6 +59,7 @@ export const ColorBox = () => {
                         borderStartRadius={index === firstItem ? 'md' : 'unset'}
                         borderEndRadius={index === lastItem ? 'md' : 'unset'}
                         key={item}
+                        onClick={() => setValue(item)}
                     >
                         {item}
                     </Button>
@@ -70,16 +67,6 @@ export const ColorBox = () => {
             </Flex>
             <Flex p="2">
                 {menu.map((item, index) => (
-                    // <chakra.button
-                    //     bg="green.100"
-                    //     border="1px"
-                    //     borderColor="blue.200"
-                    //     borderStartRadius={index === 0 ? 'md' : 'unset'}
-                    //     borderEndRadius={index === menu.length ? 'md' : 'unset'}
-                    //     key={item}
-                    // >
-                    //     {item}
-                    // </chakra.button>
                     <Button
                         size="sm"
                         bg={item}
@@ -89,6 +76,7 @@ export const ColorBox = () => {
                         borderStartRadius={index === firstItem ? 'md' : 'unset'}
                         borderEndRadius={index === lastItem ? 'md' : 'unset'}
                         key={item}
+                        onClick={() => setValue(item)}
                     >
                         {item}
                     </Button>
