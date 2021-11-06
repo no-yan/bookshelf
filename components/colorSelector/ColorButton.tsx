@@ -1,8 +1,9 @@
-import { Flex, HStack } from '@chakra-ui/layout';
-import { Button, chakra } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/layout';
+import { Button, VStack } from '@chakra-ui/react';
 import React from 'react';
 
 // TODO: ホバー時のテキスト色を変更し、読みやすくする
+// TODO: ダークモード時のテキスト色を変更し、読みやすく
 export const ColorBox = ({
     setValue,
 }: {
@@ -48,40 +49,50 @@ export const ColorBox = ({
 
     return (
         <>
-            <Flex p="2">
-                {menu.map((item, index) => (
-                    <Button
-                        size="sm"
-                        bg={item}
-                        textColor={textColor[index]}
-                        border="1px"
-                        borderColor="blue.200"
-                        borderStartRadius={index === firstItem ? 'md' : 'unset'}
-                        borderEndRadius={index === lastItem ? 'md' : 'unset'}
-                        key={item}
-                        onClick={() => setValue(item)}
-                    >
-                        {item}
-                    </Button>
-                ))}
-            </Flex>
-            <Flex p="2">
-                {menu.map((item, index) => (
-                    <Button
-                        size="sm"
-                        bg={item}
-                        textColor={textColorOff[index]}
-                        border="1px"
-                        borderColor="blue.200"
-                        borderStartRadius={index === firstItem ? 'md' : 'unset'}
-                        borderEndRadius={index === lastItem ? 'md' : 'unset'}
-                        key={item}
-                        onClick={() => setValue(item)}
-                    >
-                        {item}
-                    </Button>
-                ))}
-            </Flex>
+            <VStack>
+                <Flex p="2">
+                    {menu.map((item, index) => (
+                        <Button
+                            size="sm"
+                            bg={item}
+                            textColor={textColor[index]}
+                            border="1px"
+                            borderColor="blue.200"
+                            borderStartRadius={
+                                index === firstItem ? 'md' : 'unset'
+                            }
+                            borderEndRadius={
+                                index === lastItem ? 'md' : 'unset'
+                            }
+                            key={item}
+                            onClick={() => setValue(item)}
+                        >
+                            {item}
+                        </Button>
+                    ))}
+                </Flex>
+                <Flex p="2">
+                    {menu.map((item, index) => (
+                        <Button
+                            size="sm"
+                            bg={item}
+                            textColor={textColorOff[index]}
+                            border="1px"
+                            borderColor="blue.200"
+                            borderStartRadius={
+                                index === firstItem ? 'md' : 'unset'
+                            }
+                            borderEndRadius={
+                                index === lastItem ? 'md' : 'unset'
+                            }
+                            key={item}
+                            onClick={() => setValue(item)}
+                        >
+                            {item}
+                        </Button>
+                    ))}
+                </Flex>
+            </VStack>
         </>
     );
 };

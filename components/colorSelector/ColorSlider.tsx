@@ -12,7 +12,7 @@ export const ColorSlider = ({ colorScheme, value, setValue }): JSX.Element => {
         <Slider
             defaultValue={value}
             onChange={setValue}
-            min={0}
+            min={100}
             max={900}
             step={100}
         >
