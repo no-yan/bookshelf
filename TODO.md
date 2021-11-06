@@ -83,3 +83,34 @@ TODO
 -   動きの導線について考える
 -   ラジオボタン、スライダー、ピッカー、適切なものを選択する
     -   figma 等デザイナーが採用しているものを参照する
+
+## Chakra UI
+
+popover のバグ２つ目
+
+以下の構造のとき、Trigger に focus があると Content クリックで画面が閉じる。blur 判定がおきていそう。
+以前の経験からバグ修正を出してもマージされる気がしないので、addEventListener で Focus 管理して解決する。
+
+Forcus
+
+```
+            <Popover trigger="hover">
+                <PopoverTrigger>
+                    <Button
+                        size="xs"
+                        bg={`${colorScheme}.400`}
+                        _hover={{ bg: `${colorScheme}.500` }}
+                    >
+                        color
+                    </Button>
+                </PopoverTrigger>
+                <PopoverContent
+                    w="min-content"
+                    border="0px"
+                    borderColor="transparent"
+                    bg="transparent"
+                >
+                    <RgbaColorPicker color={color} onChange={setColor} />
+                </PopoverContent>
+            </Popover>
+```

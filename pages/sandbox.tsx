@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button';
-import { HStack } from '@chakra-ui/layout';
+import { HStack, VStack } from '@chakra-ui/layout';
 import React, { useState } from 'react';
 import { ColorBox } from '../components/colorSelector/ColorButton';
 import { ColorPicker } from '../components/colorSelector/ColorPicker';
@@ -22,7 +22,7 @@ const SliderSelect = () => {
     const [colorValue, setColorValue] = useState(100);
     console.log(colorValue);
     return (
-        <HStack>
+        <HStack minW="800px">
             <Button bg={`${colorScheme}.${colorValue}`}>Check The Color</Button>
             <ColorSlider
                 colorScheme={colorScheme}
@@ -35,11 +35,11 @@ const SliderSelect = () => {
 
 const Sandbox = (): JSX.Element => {
     return (
-        <>
+        <VStack spacing={2} w="100vw" h="100vh">
             <ButtonSelect />
             <SliderSelect />
             <ColorPicker />
-        </>
+        </VStack>
     );
 };
 
