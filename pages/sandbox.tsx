@@ -5,7 +5,7 @@ import { ColorSlider } from '../components/colorSelector/ColorSlider';
 
 const Sandbox = () => {
     const [color, setColor] = useState('red.100');
-    console.log(color);
+
     const colorScheme = 'red';
     const [colorValue, setColorValue] = useState(100);
     return (
