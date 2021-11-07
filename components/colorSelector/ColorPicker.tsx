@@ -52,8 +52,14 @@ export const ColorPicker = (): JSX.Element => {
                     border="0px"
                     borderColor="transparent"
                     bg="transparent"
+                    //To avoid blur around the picker area, event outside.
+                    position="relative"
+                    p={1}
+                    top={-1}
                 >
-                    <RgbaColorPicker color={color} onChange={setColor} />
+                    <PopoverBody>
+                        <RgbaColorPicker color={color} onChange={setColor} />
+                    </PopoverBody>{' '}
                 </PopoverContent>
             </Popover>
         </>
