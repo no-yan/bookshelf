@@ -1,7 +1,7 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Stack } from '@chakra-ui/layout';
 import type { NextPage } from 'next';
-import { Editor, DrawerExample } from '../components/editor/editor';
+import { Editor, DrawerExample } from '../src/components/editor/editor';
 
 import React from 'react';
 

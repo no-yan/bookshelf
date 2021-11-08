@@ -3,9 +3,6 @@ import {
     PopoverTrigger,
     Button,
     PopoverContent,
-    PopoverArrow,
-    PopoverCloseButton,
-    PopoverHeader,
     PopoverBody,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';

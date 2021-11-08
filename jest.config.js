@@ -2,11 +2,6 @@ module.exports = {
     testEnvironment: 'jsdom',
 
     moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-    modulePathIgnorePatterns: [
-        '<rootDir>/website/.cache',
-        '<rootDir>/examples',
-        '<rootDir>/tooling/cra-template*',
-    ],
 
     transform: {
         '^.+\\.(ts|tsx)?$': [
@@ -47,9 +42,6 @@ module.exports = {
         'jest-watch-typeahead/testname',
     ],
 
-    collectCoverageFrom: [
-        'pages/**/*.{js,ts,tsx}',
-        'components/**/*.{js,tsx,ts}',
-        'theme/**/*.{js,tsx,ts}',
-    ],
+    collectCoverageFrom: ['src/**/*.{js,ts,tsx}'],
+    //pagesにtestableなものを入れたくないという主張
 };

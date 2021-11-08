@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import { ChakraProvider, Flex } from '@chakra-ui/react';
 import React from 'react';
-import NavBar from '../components/NavBar';
+import NavBar from '../src/components/NavBar';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (
