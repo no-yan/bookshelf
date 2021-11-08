@@ -1,7 +1,7 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Stack } from '@chakra-ui/layout';
 import type { NextPage } from 'next';
-import { Editor } from './editor';
+import { Editor, DrawerExample } from '../components/editor/editor';
 
 import React from 'react';
 
@@ -15,7 +15,9 @@ const Home: NextPage = () => (
         align="center"
         spacing="12px"
     >
-        <Editor />
+        <DrawerExample>
+            <Editor />
+        </DrawerExample>
     </Stack>
 );
 

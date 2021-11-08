@@ -2,47 +2,51 @@ import { Button, ButtonProps } from '@chakra-ui/button';
 import { Editable, EditableInput, EditablePreview } from '@chakra-ui/editable';
 import { Center, HStack, Stack, VStack } from '@chakra-ui/layout';
 import {
-    useStyleConfig,
-    theme,
     RadioGroup,
     Radio,
-    CSSObject,
+    useDisclosure,
+    Drawer,
+    DrawerBody,
+    DrawerCloseButton,
+    DrawerContent,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
 } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import React from 'react';
+import { useEditor } from './useEditor';
 
-const useEditor = (): {
-    variants: string[];
-    getterSetter: {
-        [key in keyof ButtonProps]?: {
-            value: string;
-            setValue: (arg: string) => void;
-        };
-    };
-    variant: string;
-    setVariant: React.Dispatch<React.SetStateAction<string>>;
-    styles: CSSObject;
-} => {
-    const variants = Object.keys(theme.components.Button.variants);
-    const [bg, setBg] = useState('red.100');
-    const [size, setSize] = useState('md');
-    const [boxShadow, setBoxShadow] = useState('lg');
-    const [variant, setVariant] = useState('solid');
-    const getterSetter: {
-        bg: { value: string; setValue: (arg: string) => void };
-        size: { value: string; setValue: (arg: string) => void };
-        boxShadow: { value: string; setValue: (arg: string) => void };
-    } = {
-        bg: { value: bg, setValue: setBg },
-        size: { value: size, setValue: setSize },
-        boxShadow: { value: boxShadow, setValue: setBoxShadow },
-    };
-
-    const styles = useStyleConfig('Button', { size, variant });
-    // console.log(size, styles);
-
-    return { variants, getterSetter, variant, setVariant, styles };
+type DrawerProps = {
+    children: JSX.Element | JSX.Element[];
 };
+export function DrawerExample({ children }: DrawerProps): JSX.Element {
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const btnRef = React.useRef(null);
 
+    return (
+        <>
+            <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
+                Open
+            </Button>
+            <Drawer
+                isOpen={isOpen}
+                placement="right"
+                onClose={onClose}
+                finalFocusRef={btnRef}
+            >
+                <DrawerOverlay />
+                <DrawerContent>
+                    <DrawerCloseButton />
+                    <DrawerHeader>Create your account</DrawerHeader>
+
+                    <DrawerBody>{children}</DrawerBody>
+
+                    <DrawerFooter></DrawerFooter>
+                </DrawerContent>
+            </Drawer>
+        </>
+    );
+}
 export const Editor = (): JSX.Element => {
     const { variants, getterSetter, variant, setVariant, styles } = useEditor();
     const propertyKeys = Object.keys(getterSetter) as unknown as [

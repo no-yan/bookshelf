@@ -7,7 +7,16 @@ import {
 } from '@chakra-ui/slider';
 import React from 'react';
 
-export const ColorSlider = ({ colorScheme, value, setValue }): JSX.Element => {
+type ColorSliderProps = {
+    colorScheme: string;
+    value: number;
+    setValue: (...args: number[]) => void;
+};
+export const ColorSlider = ({
+    colorScheme,
+    value,
+    setValue,
+}: ColorSliderProps): JSX.Element => {
     return (
         <Slider
             defaultValue={value}
