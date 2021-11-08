@@ -34,7 +34,7 @@ export function DrawerExample({ children }: DrawerProps): JSX.Element {
                 onClose={onClose}
                 finalFocusRef={btnRef}
             >
-                <DrawerOverlay />
+                {/* <DrawerOverlay /> */}
                 <DrawerContent>
                     <DrawerCloseButton />
                     <DrawerHeader>Create your account</DrawerHeader>
