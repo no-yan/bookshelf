@@ -11,7 +11,6 @@ import {
     DrawerContent,
     DrawerFooter,
     DrawerHeader,
-    DrawerOverlay,
 } from '@chakra-ui/react';
 import React from 'react';
 import { useEditor } from './useEditor';
