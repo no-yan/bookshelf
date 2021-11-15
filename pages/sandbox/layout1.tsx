@@ -1,24 +1,70 @@
 import { Button } from '@chakra-ui/button';
-import { Box, Heading, HStack, VStack, Text } from '@chakra-ui/react';
+import {
+    Box,
+    Heading,
+    HStack,
+    VStack,
+    Text,
+    ListItem,
+    UnorderedList,
+    useColorModeValue,
+    List,
+    Grid,
+} from '@chakra-ui/react';
 import React from 'react';
 
 const Layout = (): JSX.Element => {
     return (
         <>
-            <HStack w="full" justify="center" spacing="12">
-                <Button>Button</Button>
-                <HStack>
-                    <VStack as="ul">
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                    </VStack>
-                    <Box>
-                        <Heading>hello</Heading>
-                        <Text>This is a area we can write</Text>
-                    </Box>
-                </HStack>
+            <HStack
+                w="full"
+                justify={'center'}
+                align={'baseline'}
+                spacing="20"
+                mt={20}
+            >
+                <Box
+                    // bg={useColorModeValue('white', 'green.700')}
+                    p={4}
+                    colorScheme={'green'}
+                >
+                    <Heading>Edit Component</Heading>
+                    <Grid
+                        w="full"
+                        templateRows="repeat(3, 1fr)"
+                        templateColumns="repeat(3, 1fr)"
+                        gap="3"
+                        pt={12}
+                        // ml="-3.5"
+                        // my="4"
+                    >
+                        <Button colorScheme="blue" variant={'ghost'}>
+                            Button
+                        </Button>
+                        <Button colorScheme="blue" variant={'link'}>
+                            Button
+                        </Button>
+                        <Button colorScheme="blue" variant={'outline'}>
+                            Button
+                        </Button>
+                        <Button colorScheme="blue" variant={'solid'}>
+                            Button
+                        </Button>
+                        <Button colorScheme="blue" variant={'unstyled'}>
+                            Button
+                        </Button>
+                    </Grid>
+                </Box>
+                <VStack align={'start'}>
+                    <Heading mt={4}>Hello</Heading>
+                    <Text>This is a area we can write</Text>
+                    <List mt={8}>
+                        <ListItem>Lorem ipsum dolor sit amet</ListItem>
+                        <ListItem>Consectetur adipiscing elit</ListItem>
+                        <ListItem>Integer molestie lorem at massa</ListItem>
+                        <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+                    </List>
+                </VStack>
             </HStack>
         </>
     );

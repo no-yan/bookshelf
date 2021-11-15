@@ -313,17 +313,13 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
     {
-        label: 'sandbox',
+        label: 'Sandbox',
+        href: '/sandbox',
         children: [
             {
-                label: 'Color Selector',
-                subLabel: 'Trending Design to inspire you',
-                href: '/sandbox',
-            },
-            {
-                label: 'New & Noteworthy',
+                label: 'Button Layout 1',
                 subLabel: 'Up-and-coming Designers',
-                href: '#',
+                href: '/sandbox/layout1',
             },
         ],
     },
