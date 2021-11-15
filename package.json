@@ -10,7 +10,8 @@
         "lint-v": "DEBUG=eslint:* next lint",
         "test": "jest --coverage",
         "test:watch": "jest --watch",
-        "gen:theme-typings": "chakra-cli tokens theme/index.ts"
+        "gen:theme-typings": "chakra-cli tokens theme/index.ts",
+        "prepare": "husky install"
     },
     "dependencies": {
         "@chakra-ui/icons": "1.0.15",
@@ -40,6 +41,7 @@
         "eslint-config-prettier": "8.3.0",
         "eslint-plugin-jest": "25.2.3",
         "eslint-plugin-testing-library": "5.0.0",
+        "husky": "^7.0.4",
         "jest": "27.3.1",
         "jest-watch-typeahead": "1.0.0",
         "prettier": "2.4.1",

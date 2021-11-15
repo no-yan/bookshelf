@@ -1,9 +1,9 @@
 import {
-    Popover,
-    PopoverTrigger,
     Button,
-    PopoverContent,
+    Popover,
     PopoverBody,
+    PopoverContent,
+    PopoverTrigger,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { RgbaColorPicker } from 'react-colorful';

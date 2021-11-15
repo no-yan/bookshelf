@@ -1,25 +1,25 @@
 import {
     Box,
-    Flex,
-    Text,
-    IconButton,
     Button,
-    Stack,
     Collapse,
+    Flex,
     Icon,
+    IconButton,
     Link,
     Popover,
-    PopoverTrigger,
     PopoverContent,
-    useColorModeValue,
+    PopoverTrigger,
+    Stack,
+    Text,
     useBreakpointValue,
+    useColorModeValue,
     useDisclosure,
 } from '@chakra-ui/react';
 import {
-    HamburgerIcon,
-    CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
+    CloseIcon,
+    HamburgerIcon,
 } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { DarkModeSwitcher } from './darkModeSwitcher';

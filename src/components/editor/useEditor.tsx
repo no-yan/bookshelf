@@ -1,5 +1,5 @@
 import { ButtonProps } from '@chakra-ui/button';
-import { useStyleConfig, theme, CSSObject } from '@chakra-ui/react';
+import { CSSObject, theme, useStyleConfig } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
 export const useEditor = (): {

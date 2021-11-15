@@ -31,9 +31,12 @@ Currently I am aiming to generate a custom config file with the button component
 -   [x] check jsx a11y working. earn how it works might help?
     -   [x] seems plugin:@next/next/recommended not working. (edit: Not so correct)
     -   [x] by this reason, I use extends:['next'] instead.
--   [ ] add rules
+-   [x] add rules
     -   [x] ~~airbnb~~ Meaningless errors and slow effective speed
-    -   [ ] prefer-arrow
+    -   [x] prefer-arrow
+-   [] add CI
+    -   [x]husky
+    -   [] lint-staged see: [Regular Expression Denial of Service (ReDoS) [High Severity]](https://github.com/okonet/lint-staged/issues/1031)
 
 ## test
 
@@ -78,7 +81,8 @@ TODO
 
 -   UI Pattern について知る
 -   デザインを学ぶ
-    -  [ ] Non-Designer's Design Book
+
+    -   [ ] Non-Designer's Design Book
 
 -   必要となるシナリオを考える
     -   デザイナーとの協業を考えると、(デザイナーがこれを使ってデザインシステムを chakra Theme として出力することを考えると)コンポーネント単位でなく、ページデザインを記述する必要がある？
@@ -86,8 +90,6 @@ TODO
 -   動きの導線について考える
 -   ラジオボタン、スライダー、ピッカー、適切なものを選択する
     -   figma 等デザイナーが採用しているものを参照する
-
-
 
 ## Chakra UI
 

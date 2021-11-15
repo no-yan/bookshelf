@@ -26,6 +26,6 @@ module.exports = {
     },
     rules: {
         'prefer-const': 'error',
-        'sort-imports': 'error',
+        'import/order': 'error',
     },
 };

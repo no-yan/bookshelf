@@ -1,15 +1,15 @@
 import { Button } from '@chakra-ui/button';
 import {
     Box,
-    Heading,
-    HStack,
-    VStack,
-    Text,
-    ListItem,
-    UnorderedList,
-    useColorModeValue,
-    List,
     Grid,
+    HStack,
+    Heading,
+    List,
+    ListItem,
+    Text,
+    UnorderedList,
+    VStack,
+    useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
 
