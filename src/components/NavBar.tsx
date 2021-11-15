@@ -317,9 +317,19 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '/sandbox',
         children: [
             {
+                label: 'Button Color Selector',
+                subLabel: 'ボタン、スライダー、color picker',
+                href: '/sandbox',
+            },
+            {
                 label: 'Button Layout 1',
                 subLabel: 'Up-and-coming Designers',
                 href: '/sandbox/layout1',
+            },
+            {
+                label: 'Button Detail 1',
+                subLabel: 'Up-and-coming Designers',
+                href: '/sandbox/detail',
             },
         ],
     },
