@@ -24,4 +24,8 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: 'module',
     },
+    rules: {
+        'prefer-const': 'error',
+        'sort-imports': 'error',
+    },
 };
