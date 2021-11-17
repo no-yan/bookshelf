@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button';
-import { Box, HStack } from '@chakra-ui/layout';
+import { Box, Flex, HStack, VStack } from '@chakra-ui/layout';
 import React from 'react';
 import { MyTab } from '../../src/feature/sandbox/MyTab';
 
@@ -18,11 +18,14 @@ const Detail = () => {
             py="5"
         >
             <HStack spacing="20" justify="center">
-                <Box h="full">
-                    <Button my="auto" size="lg">
-                        Button
-                    </Button>
-                </Box>
+                <Flex h="full" direction="column">
+                    <Box h="80%" justifyContent="flex-end">
+                        <Button mx="auto" size="lg">
+                            Button
+                        </Button>
+                    </Box>
+                    <Box>variant</Box>
+                </Flex>
 
                 <MyTab />
             </HStack>
