@@ -1,5 +1,5 @@
 import { Button } from '@chakra-ui/button';
-import { Box, HStack, VStack } from '@chakra-ui/layout';
+import { Box, HStack } from '@chakra-ui/layout';
 import React from 'react';
 import { MyTab } from '../../src/feature/sandbox/MyTab';
 

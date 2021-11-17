@@ -1,23 +1,20 @@
 import { Box, Heading } from '@chakra-ui/layout';
 import { chakra } from '@chakra-ui/system';
-import React from 'react';
-import { LayoutProps, Layout } from './Layout';
+import type { DeepReadonly } from '../../utils/deepReadonly';
+import { Layout } from './Layout';
 
-export const Feature = () => {
-    const data: LayoutProps[] = [
-        {
-            label: 'font',
-            text: '12px',
-        },
-        {
-            label: 'color',
-            text: 'red.200',
-        },
-        {
-            label: 'Bg Color',
-            text: 'gray.500',
-        },
-    ];
+type FeatureProps = DeepReadonly<{
+    groupLabel: string;
+    properties: {
+        label: string;
+        text: string;
+    }[];
+}>;
+
+export const PropertyGroup = ({
+    groupLabel,
+    properties,
+}: FeatureProps): JSX.Element => {
     return (
         <>
             <Box mt="4">
@@ -30,10 +27,10 @@ export const Feature = () => {
                     borderBottomStyle="dashed"
                     mb="1"
                 >
-                    Basics
+                    {groupLabel}
                 </Heading>
                 <chakra.div>
-                    {data.map((ele) => (
+                    {properties.map((ele) => (
                         <Layout
                             label={ele.label}
                             text={ele.text}

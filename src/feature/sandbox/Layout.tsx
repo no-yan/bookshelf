@@ -2,8 +2,8 @@ import { HStack, Text } from '@chakra-ui/layout';
 import React from 'react';
 
 export type LayoutProps = {
-    label: string;
-    text: string;
+    readonly label: string;
+    readonly text: string;
 };
 export const Layout = ({ label, text }: LayoutProps) => {
     return (
