@@ -7,9 +7,7 @@ import {
     List,
     ListItem,
     Text,
-    UnorderedList,
     VStack,
-    useColorModeValue,
 } from '@chakra-ui/react';
 import React from 'react';
 
