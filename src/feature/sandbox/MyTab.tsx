@@ -30,7 +30,7 @@ export function MyTab(): JSX.Element {
 
             <TabPanels>
                 {data.map((_item) => (
-                    <TabPanel key="_item.">
+                    <TabPanel key={_item.label}>
                         <PropertyGroup groupLabel="basic" properties={data} />
                         <PropertyGroup groupLabel="basic" properties={data} />
                         <PropertyGroup groupLabel="basic" properties={data} />
