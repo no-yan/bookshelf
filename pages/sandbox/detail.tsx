@@ -1,22 +1,10 @@
 import { Button } from '@chakra-ui/button';
 import { Box, Grid, Heading, HStack, Text, VStack } from '@chakra-ui/layout';
-import { chakra, useMultiStyleConfig } from '@chakra-ui/system';
+import { chakra } from '@chakra-ui/system';
 import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/tabs';
 import React from 'react';
-import chakraTheme from '@chakra-ui/theme';
-import theme from '../../src/theme';
-const Detail = () => {
-    console.log(
-        theme.components.Tabs.baseStyle(theme.components.Tabs.defaultProps)
-    );
-    // const styles = useMultiStyleConfig('Tabs', { isMultiPart: true });
-    // console.log(styles);
-    // console.log(
-    //     chakraTheme.components.Tabs.baseStyle(
-    //         theme.components.Tabs.defaultProps
-    //     )
-    // );
 
+const Detail = () => {
     return (
         <Box
             w="1000px"
@@ -112,7 +100,7 @@ const Feature = () => {
 };
 
 const Atom = () => (
-    <TabPanel>
+    <>
         {/* <Grid templateColumns="repeat(2, 1fr)" gap="10px 80px"> */}
         <Feature />
         <Feature />
@@ -120,7 +108,7 @@ const Atom = () => (
         <Feature />
         <Feature />
         {/* </Grid> */}
-    </TabPanel>
+    </>
 );
 
 function MyTab() {
@@ -134,31 +122,13 @@ function MyTab() {
 
             <TabPanels>
                 <TabPanel>
-                    <Grid templateColumns="repeat(2, 1fr)" gap="10px 80px">
-                        <Feature />
-                        <Feature />
-                        <Feature />
-                        <Feature />
-                        <Feature />
-                    </Grid>
+                    <Atom />
                 </TabPanel>
                 <TabPanel>
-                    {/* <Grid templateColumns="repeat(2, 1fr)" gap="10px 80px"> */}
-                    <Feature />
-                    <Feature />
-                    <Feature />
-                    <Feature />
-                    <Feature />
-                    {/* </Grid> */}
+                    <Atom />
                 </TabPanel>
                 <TabPanel>
-                    {/* <Grid templateColumns="repeat(2, 1fr)" gap="10px 80px"> */}
-                    <Feature />
-                    <Feature />
-                    <Feature />
-                    <Feature />
-                    <Feature />
-                    {/* </Grid> */}
+                    <Atom />
                 </TabPanel>
             </TabPanels>
         </Tabs>
