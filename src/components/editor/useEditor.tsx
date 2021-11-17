@@ -30,6 +30,6 @@ export const useEditor = (): {
     };
 
     const styles = useStyleConfig('Button', { size, variant });
-    // console.log(size, styles);
+
     return { variants, getterSetter, variant, setVariant, styles };
 };

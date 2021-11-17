@@ -18,6 +18,7 @@ export function MyTab(): JSX.Element {
             text: 'gray.500',
         },
     ] as const;
+
     return (
         <Tabs w="500px">
             <TabList>

@@ -20,7 +20,7 @@ const ButtonSelect = () => {
 const SliderSelect = () => {
     const colorScheme = 'red';
     const [colorValue, setColorValue] = useState(100);
-    console.log(colorValue);
+
     return (
         <HStack minW="800px">
             <Button bg={`${colorScheme}.${colorValue}`}>Check The Color</Button>
