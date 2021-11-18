@@ -1,25 +1,25 @@
 import {
     Box,
-    Flex,
-    Text,
-    IconButton,
     Button,
-    Stack,
     Collapse,
+    Flex,
     Icon,
+    IconButton,
     Link,
     Popover,
-    PopoverTrigger,
     PopoverContent,
-    useColorModeValue,
+    PopoverTrigger,
+    Stack,
+    Text,
     useBreakpointValue,
+    useColorModeValue,
     useDisclosure,
 } from '@chakra-ui/react';
 import {
-    HamburgerIcon,
-    CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
+    CloseIcon,
+    HamburgerIcon,
 } from '@chakra-ui/icons';
 import NextLink from 'next/link';
 import { DarkModeSwitcher } from './darkModeSwitcher';
@@ -313,17 +313,23 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
     {
-        label: 'sandbox',
+        label: 'Sandbox',
+        href: '/sandbox',
         children: [
             {
-                label: 'Color Selector',
-                subLabel: 'Trending Design to inspire you',
+                label: 'Button Color Selector',
+                subLabel: 'ボタン、スライダー、color picker',
                 href: '/sandbox',
             },
             {
-                label: 'New & Noteworthy',
+                label: 'Button Layout 1',
                 subLabel: 'Up-and-coming Designers',
-                href: '#',
+                href: '/sandbox/layout1',
+            },
+            {
+                label: 'Button Detail 1',
+                subLabel: 'Up-and-coming Designers',
+                href: '/sandbox/detail',
             },
         ],
     },

@@ -3,8 +3,8 @@ import { useColorMode } from '@chakra-ui/color-mode';
 
 export const DarkModeSwitcher = (): JSX.Element => {
     const { colorMode } = useColorMode();
-
     const { toggleColorMode } = useColorMode();
+
     return (
         <Button onClick={toggleColorMode}>
             {colorMode === 'light' ? (

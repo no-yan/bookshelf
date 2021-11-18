@@ -1,4 +1,3 @@
-import { useStyleConfig } from '@chakra-ui/system';
 import { omitThemingProps, ThemingProps } from '@chakra-ui/system';
 
 describe('useExampleModalHook', () => {

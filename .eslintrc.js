@@ -24,4 +24,16 @@ module.exports = {
         ecmaVersion: 12,
         sourceType: 'module',
     },
+    rules: {
+        'prefer-const': 'error',
+        'import/order': 'error',
+        'padding-line-between-statements': [
+            'error',
+            {
+                blankLine: 'always',
+                prev: '*',
+                next: 'return',
+            },
+        ],
+    },
 };

@@ -1,15 +1,16 @@
 import {
-    Popover,
-    PopoverTrigger,
     Button,
-    PopoverContent,
+    Popover,
     PopoverBody,
+    PopoverContent,
+    PopoverTrigger,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { RgbaColorPicker } from 'react-colorful';
 
 const format = (number: number): string => {
     const hex = number.toString(16);
+
     return hex.length < 2 ? '0' + hex : hex;
 };
 type RgbaColor = {
@@ -32,6 +33,7 @@ export const ColorPicker = (): JSX.Element => {
         a: 0.2,
     });
     const colorScheme = 'red';
+
     return (
         <>
             <Popover trigger="hover">

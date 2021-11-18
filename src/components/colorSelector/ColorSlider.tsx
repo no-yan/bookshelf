@@ -1,9 +1,9 @@
 import { Box } from '@chakra-ui/layout';
 import {
     Slider,
-    SliderTrack,
     SliderFilledTrack,
     SliderThumb,
+    SliderTrack,
 } from '@chakra-ui/slider';
 import React from 'react';
 

@@ -2,16 +2,15 @@ import { Button, ButtonProps } from '@chakra-ui/button';
 import { Editable, EditableInput, EditablePreview } from '@chakra-ui/editable';
 import { Center, HStack, Stack, VStack } from '@chakra-ui/layout';
 import {
-    RadioGroup,
-    Radio,
-    useDisclosure,
     Drawer,
     DrawerBody,
     DrawerCloseButton,
     DrawerContent,
     DrawerFooter,
     DrawerHeader,
-    DrawerOverlay,
+    Radio,
+    RadioGroup,
+    useDisclosure,
 } from '@chakra-ui/react';
 import React from 'react';
 import { useEditor } from './useEditor';
@@ -34,7 +33,6 @@ export function DrawerExample({ children }: DrawerProps): JSX.Element {
                 onClose={onClose}
                 finalFocusRef={btnRef}
             >
-                {/* <DrawerOverlay /> */}
                 <DrawerContent>
                     <DrawerCloseButton />
                     <DrawerHeader>Create your account</DrawerHeader>
@@ -68,7 +66,6 @@ export const Editor = (): JSX.Element => {
                 </VStack>
                 <VStack>
                     {propertyKeys.map((property) => {
-                        // console.log(property, getterSetter[property]?.value);
                         return (
                             <Editable
                                 key={property}

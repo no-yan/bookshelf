@@ -1,9 +1,9 @@
 import { Button } from '@chakra-ui/button';
 import { HStack, VStack } from '@chakra-ui/layout';
 import React, { useState } from 'react';
-import { ColorBox } from '../src/components/colorSelector/ColorButton';
-import { ColorPicker } from '../src/components/colorSelector/ColorPicker';
-import { ColorSlider } from '../src/components/colorSelector/ColorSlider';
+import { ColorBox } from '../../src/components/colorSelector/ColorButton';
+import { ColorPicker } from '../../src/components/colorSelector/ColorPicker';
+import { ColorSlider } from '../../src/components/colorSelector/ColorSlider';
 
 const ButtonSelect = () => {
     const [color, setColor] = useState('red.100');
@@ -20,7 +20,7 @@ const ButtonSelect = () => {
 const SliderSelect = () => {
     const colorScheme = 'red';
     const [colorValue, setColorValue] = useState(100);
-    console.log(colorValue);
+
     return (
         <HStack minW="800px">
             <Button bg={`${colorScheme}.${colorValue}`}>Check The Color</Button>
