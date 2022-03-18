@@ -28,10 +28,10 @@ export function DrawerExample({ children }: DrawerProps): JSX.Element {
                 Open
             </Button>
             <Drawer
-                isOpen={isOpen}
-                placement="right"
-                onClose={onClose}
                 finalFocusRef={btnRef}
+                isOpen={isOpen}
+                onClose={onClose}
+                placement="right"
             >
                 <DrawerContent>
                     <DrawerCloseButton />
@@ -79,12 +79,12 @@ export const Editor = (): JSX.Element => {
                     })}
                     <RadioGroup
                         key="variant"
-                        value={variant}
                         onChange={setVariant}
+                        value={variant}
                     >
                         <Stack direction="row">
                             {variants.map((value) => (
-                                <Radio value={value} key={value}>
+                                <Radio key={value} value={value}>
                                     {value}
                                 </Radio>
                             ))}

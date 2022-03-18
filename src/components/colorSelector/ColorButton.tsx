@@ -53,18 +53,18 @@ export const ColorBox = ({
                 <Flex p="2">
                     {menu.map((item, index) => (
                         <Button
-                            size="sm"
-                            bg={item}
                             textColor={textColor[index]}
+                            bg={item}
                             border="1px"
                             borderColor="blue.200"
-                            borderStartRadius={
-                                index === firstItem ? 'md' : 'unset'
-                            }
                             borderEndRadius={
                                 index === lastItem ? 'md' : 'unset'
                             }
+                            borderStartRadius={
+                                index === firstItem ? 'md' : 'unset'
+                            }
                             key={item}
+                            size="sm"
                             onClick={() => setValue(item)}
                         >
                             {item}
@@ -74,18 +74,18 @@ export const ColorBox = ({
                 <Flex p="2">
                     {menu.map((item, index) => (
                         <Button
-                            size="sm"
-                            bg={item}
                             textColor={textColorOff[index]}
+                            bg={item}
                             border="1px"
                             borderColor="blue.200"
-                            borderStartRadius={
-                                index === firstItem ? 'md' : 'unset'
-                            }
                             borderEndRadius={
                                 index === lastItem ? 'md' : 'unset'
                             }
+                            borderStartRadius={
+                                index === firstItem ? 'md' : 'unset'
+                            }
                             key={item}
+                            size="sm"
                             onClick={() => setValue(item)}
                         >
                             {item}

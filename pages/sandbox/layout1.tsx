@@ -10,16 +10,15 @@ import {
     VStack,
 } from '@chakra-ui/react';
 import React from 'react';
-
 const Layout = (): JSX.Element => {
     return (
         <>
             <HStack
-                w="full"
-                justify={'center'}
                 align={'baseline'}
-                spacing="20"
+                justify={'center'}
+                w="full"
                 mt={20}
+                spacing="20"
             >
                 <Box
                     // bg={useColorModeValue('white', 'green.700')}
@@ -28,10 +27,10 @@ const Layout = (): JSX.Element => {
                 >
                     <Heading>Edit Component</Heading>
                     <Grid
-                        w="full"
+                        gap="3"
                         templateRows="repeat(3, 1fr)"
                         templateColumns="repeat(3, 1fr)"
-                        gap="3"
+                        w="full"
                         pt={12}
                         // ml="-3.5"
                         // my="4"
@@ -69,3 +68,19 @@ const Layout = (): JSX.Element => {
 };
 
 export default Layout;
+const Chao = () => {
+    return (
+        <Box
+            d={'flex'}
+            w="24"
+            h="12"
+            mx="24"
+            p="10"
+            border="1px"
+            borderColor="gray.200"
+            bgColor={'green.200'}
+        >
+            Chao!
+        </Box>
+    );
+};

@@ -14,7 +14,7 @@ module.exports = {
         'next/core-web-vitals',
         'prettier',
     ],
-    plugins: ['testing-library'],
+    plugins: ['testing-library', 'chakra-ui'], //'@no-yan/chakraui'],
 
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -25,6 +25,15 @@ module.exports = {
         sourceType: 'module',
     },
     rules: {
+        'chakra-ui/props-order': [
+            1,
+            {
+                lastProps: ['onClick'],
+                firstProps: [],
+            },
+        ],
+        'chakra-ui/props-shorthand': 'error',
+        // '@no-yan/chakraui/props-order': 'warn',
         'prefer-const': 'error',
         'import/order': 'error',
         'padding-line-between-statements': [

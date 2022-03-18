@@ -39,22 +39,21 @@ export const ColorPicker = (): JSX.Element => {
             <Popover trigger="hover">
                 <PopoverTrigger>
                     <Button
-                        size="xs"
                         bg={`${colorScheme}.400`}
                         _hover={{ bg: `${colorScheme}.500` }}
+                        size="xs"
                     >
                         color
                     </Button>
                 </PopoverTrigger>
                 <PopoverContent
+                    position="relative"
+                    top={-1}
                     w="min-content"
+                    p={1}
+                    bg="transparent"
                     border="0px"
                     borderColor="transparent"
-                    bg="transparent"
-                    //To avoid blur around the picker area, event outside.
-                    position="relative"
-                    p={1}
-                    top={-1}
                 >
                     <PopoverBody>
                         <RgbaColorPicker color={color} onChange={setColor} />
