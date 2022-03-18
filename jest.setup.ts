@@ -9,5 +9,6 @@ process.env = {
         domains: ['images.example.com'],
         path: '/_next/image',
         loader: 'default',
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any,
 };

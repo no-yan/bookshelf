@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     return (
         <>
             <ChakraProvider resetCSS theme={theme}>
-                <Flex minH="100vh" direction="column">
+                <Flex direction="column" minH="100vh">
                     <NavBar />
                     <Component {...pageProps} />
                 </Flex>

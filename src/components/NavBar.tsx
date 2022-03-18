@@ -177,7 +177,7 @@ const DesktopNav = () => {
                                 p={4}
                                 bg={popoverContentBgColor}
                                 border={0}
-                                boxShadow="xl"
+                                shadow="xl"
                                 rounded="xl"
                             >
                                 <Stack>
@@ -243,15 +243,6 @@ const MobileNav = () => (
             <MobileNavItem key={navItem.label} {...navItem} />
         ))}
     </Stack>
-);
-
-const X = () => <Box w="11" h={12} />;
-const Y = () => (
-    <Box
-        w={'11'}
-        // hello
-        h={12 + 1}
-    />
 );
 
 const MobileNavItem = ({ label, children, href }: NavItem) => {

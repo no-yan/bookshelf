@@ -18,12 +18,12 @@ export const Layout = ({ label, text }: LayoutProps) => {
                 {label}
             </Text>
             <Box
+                flexDir="column"
+                w="1"
+                px={2}
+                color="red.500"
                 bgGradient={'red.500'}
                 className=""
-                color="red.500"
-                flexDir="column"
-                px={2}
-                w="1"
             ></Box>
             <Text as="span" w="50%" fontWeight="thin">
                 {text}

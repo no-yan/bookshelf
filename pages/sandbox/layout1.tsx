@@ -68,19 +68,3 @@ const Layout = (): JSX.Element => {
 };
 
 export default Layout;
-const Chao = () => {
-    return (
-        <Box
-            d={'flex'}
-            w="24"
-            h="12"
-            mx="24"
-            p="10"
-            border="1px"
-            borderColor="gray.200"
-            bgColor={'green.200'}
-        >
-            Chao!
-        </Box>
-    );
-};

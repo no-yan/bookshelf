@@ -47,7 +47,7 @@ export const ColorPicker = (): JSX.Element => {
                     </Button>
                 </PopoverTrigger>
                 <PopoverContent
-                    position="relative"
+                    pos="relative"
                     top={-1}
                     w="min-content"
                     p={1}
