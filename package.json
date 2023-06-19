@@ -29,7 +29,7 @@
         "@chakra-ui/cli": "1.6.0",
         "@swc-node/jest": "1.4.1",
         "@testing-library/jest-dom": "5.16.5",
-        "@testing-library/react": "12.1.2",
+        "@testing-library/react": "12.1.5",
         "@types/eslint": "7.28.2",
         "@types/prettier": "2.7.1",
         "@types/react": "17.0.35",
